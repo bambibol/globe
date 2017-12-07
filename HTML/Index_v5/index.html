@@ -17,8 +17,7 @@
 
 	<!-- ALL STREAM LINKS HERE AND MAPPED TO video labels-->
 <!--<button type='button' onclick='transitionTo("local")'>Local</button>-->
-<div id="world">
-<div class="container-fluid">
+<div id="world" class="container-fluid">
 	<div class="row menusrow">
         <div class="col-md-12">
             <div class="row">
@@ -74,9 +73,9 @@
 			</div>
 		</div>
 	</div>
-  </div>
 
-</div>
+
+
 
 	<!-- ALL AUDIO FILES STORED HERE AND MAPPED TO myAudio labels-->
 
@@ -122,16 +121,55 @@
 	</audio>
 
 
-<<<<<<< HEAD
-
-	<div class="streamContainer">
-		<video id="streamOne" width="400" height="400"></video>
-	</div>
-=======
-	<!-- PLACE HERE THE LOCAL CAM + WIFI SNITCH -->
-	<div id="local">AMSTERDAM</div>
->>>>>>> 32e5d1894bea3024f9de6c28288c4c032f23058d
 	
+
+	
+
+	<!-- PLACE HERE THE LOCAL CAM + WIFI SNITCH -->
+	<div id="local" class="row menusrow">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-xs-4 video-container">
+					
+
+					<div class="streamContainer">
+					<video id="streamOne"></video>
+					</div>
+
+				</div>
+				<div class="col-xs-4 video-container">
+					<img id="localcam1" src="http://105.198.227.126:8080/cgi-bin/camera?">
+				</div>
+				<div class="col-xs-4 video-container">
+					<img id="localcam1" src="http://105.198.227.126:8080/cgi-bin/camera?">
+				</div>
+			<div class="row">
+				<div class="col-xs-12" id="terminal">
+					<h3><?php <br>
+					function RandomString() <br>
+					{<br>
+   					$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; <br>
+    				$randstring = '';<br>
+    				for ($i = 0; $i < 10; $i++) {<br>
+        			$randstring = $characters[rand(0, strlen($characters))];<br>
+    				}<br>
+    				<br>
+    				return $randstring;<br>
+					}<br>
+					<br>
+					RandomString();<br>
+					echo $randstring;<br>
+				</h3>
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+
+ </div>
+
+
+
 	<script type="text/javascript" src="src/main.js">
   	</script>
 
