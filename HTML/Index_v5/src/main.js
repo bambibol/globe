@@ -1,26 +1,9 @@
-// var body = document.querySelector("body");
-
-// body.addEventListener("keypress", function(){
-// 	if(this.keyCode == 32){
-// 		;
-// 	}
-// });
-
-
-//var x = document.getElementById("myAudio");
-//var z = document.getElementById("myAudio2");
-
-//var y = keydown.keyCode;
-
-//function myFunction() {
-//    document.getElementById("myDIV").style.opacity = "1";
-//}
+//main.js
 
 
 document.addEventListener("keyup", keyupFunction);
 document.addEventListener("keydown", keydownFunction);
 
-// var doc = document.addEventListener("")
 
 
 
@@ -75,6 +58,12 @@ function keydownFunction(e) {
 	 } else if (e.which == 88) {/* x */
 	 	document.getElementById("video12").style.opacity = "1";
 	 	myAudio10.volume = 0;
+
+	 } else if (e.which == 81) {/* q */
+	 	document.getElementById("world").style.visibility = "hidden";
+	 	document.getElementById("local").style.visibility = "visible";
+
+
  	}
  	console.log(e.keyCode);
  } 
@@ -130,6 +119,10 @@ function keyupFunction(e) {
 	 } else if (e.which == 88) {/* x */
 	 	document.getElementById("video12").style.opacity = "0";
 	 	myAudio10.volume = 0;
+
+	 } else if (e.which == 81) {/* q */
+	 	document.getElementById("world").style.visibility = "visible";
+	 	document.getElementById("local").style.visibility = "hidden";
  	}
  	console.log(e);
  }
