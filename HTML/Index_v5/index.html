@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="src/style.css">
-
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 </head>
 <body>
@@ -129,36 +129,57 @@
 	<div id="local" class="row menusrow">
 		<div class="col-md-12">
 			<div class="row">
-				<div class="col-xs-4 video-container">
-					
-
+				<div class="col-xs-3 video-container">
 					<div class="streamContainer">
 					<video id="streamOne"></video>
 					</div>
+				</div>
 
+				<div class="col-xs-3 video-container">
+					<img id="localcam1" src="http://24.222.39.230:8082/mjpeg.cgi">
 				</div>
-				<div class="col-xs-4 video-container">
-					<img id="localcam1" src="http://105.198.227.126:8080/cgi-bin/camera?">
+
+				<div class="col-xs-3 video-container">
+					<img id="localcam1" src="http://24.222.39.230:8082/mjpeg.cgi">
 				</div>
-				<div class="col-xs-4 video-container">
-					<img id="localcam1" src="http://105.198.227.126:8080/cgi-bin/camera?">
+
+				<div class="col-xs-3 video-container">
+					<img id="localcam1" src="http://24.222.39.230:8082/mjpeg.cgi">
 				</div>
+
 			<div class="row">
-				<div class="col-xs-12" id="terminal">
-					<h3><?php <br>
-					function RandomString() <br>
-					{<br>
-   					$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; <br>
-    				$randstring = '';<br>
-    				for ($i = 0; $i < 10; $i++) {<br>
-        			$randstring = $characters[rand(0, strlen($characters))];<br>
-    				}<br>
-    				<br>
-    				return $randstring;<br>
-					}<br>
-					<br>
-					RandomString();<br>
-					echo $randstring;<br>
+				<div class="col-xs-12" id="terminal" style="overflow-y:scroll">
+					<h3> 
+
+
+
+
+
+				&nbsp;clone: function( elem, dataAndEvents, deepDataAndEvents ) { <br>
+				&nbsp;&nbsp;inPage = jQuery.contains( elem.ownerDocument, elem ); <br><br>
+				var destElements, node, clone, i, srcElements, <br>
+				&nbsp;&nbsp;fixCloneNodeIssues( node, destElements[i] );<br><br>
+				&nbsp;&nbsp;&nbsp;(elem.nodeType === 1 || elem.nodeType === 11) && !jQuery.isXMLDoc(elem) ) { <br>
+				// Ensure that the destination node is not null; Fixes #9587<br><br>
+				&nbsp;&nbsp;if ( destElements[i] ) {<br>
+				// Fix all IE cloning issues
+				// We eschew Sizzle here for performance reasons: http://jsperf.com/getall-vs-sizzle/2<br><br>
+				&nbsp;&nbsp;clone = elem.cloneNode( true );<br>
+				&nbsp;&nbsp;destElements = getAll( clone );<br>
+				&nbsp;for ( i = 0; (node = srcElements[i]) != null; ++i ) {<br>
+				&nbsp;&nbsp;&nbsp;fragmentDiv.innerHTML = elem.outerHTML;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;fragmentDiv.removeChild( clone = fragmentDiv.firstChild );<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;srcElements = getAll( elem );<br><br>
+				// IE<=8 does not properly clone detached, unknown element nodes<br>
+				&nbsp;&nbsp;if ( (!support.noCloneEvent || !support.noCloneChecked) &&<br><br>
+				&nbsp;&nbsp;if ( support.html5Clone || jQuery.isXMLDoc(elem) || !rnoshimcache.test( "<" + elem.nodeName + ">" ) ) {<br><br>
+				&nbsp;&nbsp;&nbsp;}<br><br>
+				&nbsp;} else {<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;    }<br>
+				}<br><br>
+				You have been hacked.<br>
+
 				</h3>
 	</div>
 	</div>
