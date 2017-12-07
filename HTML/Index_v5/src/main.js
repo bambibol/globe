@@ -169,4 +169,42 @@ myAudio10.volume = 0;
 //	 }
 //}
 
+// (function(){
+// 	var streamOne = document.getElementById('streamOne'),
+// 		vendorUrl = window.URL || window.webkitURL;
 
+// 	navigator.getMedia = navigator.getUserMedia ||
+// 						 navigator.webkitGetUserMedia ||
+// 						 navigator.mozGetUserMedia ||
+// 						 navigator.msGetUserMedia;
+
+// 	//capture video
+// 	navigator.getMedia({
+// 		video: true,
+// 		audio: false
+// 	}, function(stream) {
+// 		streamOne.src = vendorUrl.createObjectURL(stream);
+// 		streamOne.play();
+// 	}, function(error) {
+// 		//an error occured
+// 		//error.code
+// 	});
+
+// })();
+
+
+var stream;
+var streamOne = document.getElementById('streamOne');
+
+navigator.webkitGetUserMedia(
+	{video: true, audio: true}, // Options
+	function(localMediaStream) { // Success
+		stream = localMediaStream;
+		streamOne.src = window.URL.createObjectURL(stream);
+	},
+	function(err) { // Failure
+		alert('getUserMedia failed: Code ' + err.code);
+	}
+);
+
+// stream.stop();
