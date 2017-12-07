@@ -68,6 +68,13 @@ function keydownFunction(e) {
 	 	document.getElementById("video10").style.opacity = "1";
 	 	myAudio10.volume = 1.0;
 
+	 } else if (e.which == 90) {/* z */
+	 	document.getElementById("video11").style.opacity = "1";
+	 	myAudio10.volume = 0;
+
+	 } else if (e.which == 88) {/* x */
+	 	document.getElementById("video12").style.opacity = "1";
+	 	myAudio10.volume = 0;
  	}
  	console.log(e.keyCode);
  } 
@@ -114,6 +121,14 @@ function keyupFunction(e) {
 
 	 } else if (e.which == 186) {/* semi-colon */
 	 	document.getElementById("video10").style.opacity = "0";
+	 	myAudio10.volume = 0;
+
+	 } else if (e.which == 90) {/* z */
+	 	document.getElementById("video11").style.opacity = "0";
+	 	myAudio10.volume = 0;
+
+	 } else if (e.which == 88) {/* x */
+	 	document.getElementById("video12").style.opacity = "0";
 	 	myAudio10.volume = 0;
  	}
  	console.log(e);
