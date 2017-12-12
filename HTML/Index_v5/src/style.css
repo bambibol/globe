@@ -120,6 +120,13 @@ width: 100%;
   border: 10px solid #000000;
   }
 
+#streamOne {
+  height: 100%;
+  
+
+
+}
+
 #world {
   z-index: 10;
   visibility: visible;

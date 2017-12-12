@@ -53,15 +53,16 @@ function keydownFunction(e) {
 
 	 } else if (e.which == 90) {/* z */
 	 	document.getElementById("video11").style.opacity = "1";
-	 	myAudio10.volume = 0;
+	 	myAudio10.volume = 1.0;
 
 	 } else if (e.which == 88) {/* x */
 	 	document.getElementById("video12").style.opacity = "1";
-	 	myAudio10.volume = 0;
+	 	myAudio10.volume = 1.0;
 
 	 } else if (e.which == 81) {/* q */
 	 	document.getElementById("world").style.visibility = "hidden";
 	 	document.getElementById("local").style.visibility = "visible";
+	 	myAudio13.volume = 1.0;
 
 
  	}
@@ -123,6 +124,7 @@ function keyupFunction(e) {
 	 } else if (e.which == 81) {/* q */
 	 	document.getElementById("world").style.visibility = "visible";
 	 	document.getElementById("local").style.visibility = "hidden";
+	 	myAudio13.volume = 0;
  	}
  	console.log(e);
  }
@@ -147,6 +149,8 @@ myAudio9.play();
 myAudio9.volume = 0;
 myAudio10.play();
 myAudio10.volume = 0;
+myAudio13.play();
+myAudio13.volume = 0;
 // audio file 2 press G
 //function keydownFunction(e) {
 //	var z = e.key;
@@ -155,49 +159,36 @@ myAudio10.volume = 0;
 //	 }
 //}
 
-//function keyupFunction(e) {
-//    var z = e.key;
-//	if(e.which == 71){
-//		x.pause();
-//	 }
-//}
-
-// (function(){
-// 	var streamOne = document.getElementById('streamOne'),
-// 		vendorUrl = window.URL || window.webkitURL;
-
-// 	navigator.getMedia = navigator.getUserMedia ||
-// 						 navigator.webkitGetUserMedia ||
-// 						 navigator.mozGetUserMedia ||
-// 						 navigator.msGetUserMedia;
-
-// 	//capture video
-// 	navigator.getMedia({
-// 		video: true,
-// 		audio: false
-// 	}, function(stream) {
-// 		streamOne.src = vendorUrl.createObjectURL(stream);
-// 		streamOne.play();
-// 	}, function(error) {
-// 		//an error occured
-// 		//error.code
-// 	});
-
-// })();
 
 
-var stream;
-var streamOne = document.getElementById('streamOne');
+//THIS IS THE START OF THE FIRST CODE OPTION FOR THE WEBCAM
 
-navigator.webkitGetUserMedia(
-	{video: true, audio: true}, // Options
-	function(localMediaStream) { // Success
-		stream = localMediaStream;
-		streamOne.src = window.URL.createObjectURL(stream);
-	},
-	function(err) { // Failure
-		alert('getUserMedia failed: Code ' + err.code);
-	}
-);
 
-// stream.stop();
+(function(){
+	var streamOne = document.getElementById('streamOne'),
+		vendorUrl = window.URL || window.webkitURL;
+
+	navigator.getMedia = navigator.getUserMedia ||
+						 navigator.webkitGetUserMedia ||
+						 navigator.mozGetUserMedia ||
+						 navigator.msGetUserMedia;
+
+	//capture video
+	navigator.getMedia({
+		video: true,
+		audio: false
+	}, function(stream) {
+		streamOne.src = vendorUrl.createObjectURL(stream);
+		streamOne.play();
+	}, function(error) {
+		//an error occured
+		//error.code
+	});
+
+})();
+
+
+
+$("terminal").animate({ scrollTop: $(document).height() - $(window).height() }, 10000, function() {
+    $(this).animate({ scrollTop: 0 }, 1000);
+});
