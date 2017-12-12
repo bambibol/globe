@@ -1,0 +1,35 @@
+---
+- name: Setting our new hostname.
+  hostname: name={{ hostname }}
+  become: yes
+
+- name: Generate locales to prevent annoying SSH messages.
+  locale_gen: name=en_US.UTF-8 state=present
+  become: yes
+
+- name: Clearing apt repositories.
+  shell: "apt-get clean"
+  become: yes
+
+- name: Update apt repositories.
+  shell: "apt-get update"
+  become: yes
+
+- name: Ensure base packages are installed.
+  apt: "name={{ item }} state=installed"
+  become: yes
+  with_items: "{{ default_packages }}"
+
+- name: Uninstall wolfram-alpha engine, we don't need it
+  apt: pkg={{ item }} state=absent
+  become: yes
+  with_items:
+    - wolfram-engine
+
+- name: Autoremove any unused packages.
+  shell: "apt-get autoremove --assume-yes --purge"
+  become: yes
+
+- name: Let's Autoclean the system.
+  shell: "apt-get autoclean --assume-yes"
+  become: yes
