@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+source $VROOT_PREFIX/hosts
+source $VROOT_PREFIX/sitm
+
+ssh_key_generate

@@ -1,0 +1,4 @@
+AP_SSID="SomethingInTheMiddleMaybe"
+#AP_PASSWORD="sitmsitm"
+AP_CHANNEL=10
+AP_INTERFACE=wlan0

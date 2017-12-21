@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+#VROOT_PREFIX=/vagrant/provision
+VROOT_PREFIX=.
+
+source $VROOT_PREFIX/sitm
+
+nfo "Updating the apt database"
+apt-get update
+
+
+apt_install_deps "vim zsh"
+
+nfo "Creating the 'someone' user"
+if ! getent group apadmin >/dev/null ; then
+	addgroup --quiet --system apadmin
+fi
+if ! getent passwd someone >/dev/null ; then
+	adduser --quiet --system --ingroup apadmin --home /home/someone --shell /bin/sh someone
+fi
+
+base_config
+python_pip_install $PYTHON_REQUIREMENTS
+
+mosquitto_install_and_config
+
+echo
+echo "#########################################################################"
+echo ">>> You have been provisioned! <<<"
+echo "This means that we have installed all the necessary software and that your Raspberry Pi is ready to be configured as a SITM node."
+echo
+echo "You are now ready to move onto the second step, installing your SSH key in the Rpi."
+echo
+echo
+echo "Make sure you have generated the SSH keypair in your workstation by executing the script provided:"
+echo "$ ./keygen"
+echo
+echo "After that you have to install the public part of the keypair in the Raspberry Pi, you can use the script for that:"
+echo
+echo "$ ./keyinstall"
+echo
+echo
+echo "You should now be able to log into your Raspberry Pi by typing:"
+echo "$ ssh someone@$RPI_HOST"
+echo "You shouldn't be asked for a password"
+echo
+echo
+echo "Once you are logged in, you can continue the process by typing:"
+echo "sudo ./apinstall SSID_NAME [AP_PASSWORD]"
+echo
+echo "This will configure your Raspberry Pi as a SITM access point with the name you provided (e.g. SSID_NAME)"
+echo
+echo
+echo "Goodbye!"
+echo "#########################################################################"
