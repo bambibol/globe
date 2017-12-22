@@ -1,0 +1,168 @@
+html, body, .container-fluid {
+  background:black;
+  height: 100%;
+}
+
+p. {
+  font-family: 'VT323', monospace; 
+}
+
+
+
+.video-container {
+  height: 100%;
+  position:relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  
+}
+
+.menusrow {
+    height: 100%;
+}
+
+.menusrow .row {
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.col-md-12 {
+    height: 50%;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+.col-xs-3 {
+  height: 100%;
+}
+
+#video1 {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+#video2 {
+  opacity: 0;
+  height: 100%;
+width: 100%;
+}
+
+#video3 {
+  opacity: 0;
+  height: 100%;
+width: 100%;
+}
+
+#video4 {
+  opacity: 0;
+  height: 100%;
+width: 100%;
+}
+
+#video5 {
+  opacity: 0;
+  height: 100%;
+width: 100%;
+}
+
+#video6 {
+  opacity: 0;
+  height: 100%;
+width: 100%;
+}
+
+#video7 {
+  opacity: 0;
+  height: 100%;
+  width: 100%
+}
+
+#video8 {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#video9 {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#video10 {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#video11 {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#video12 {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.streamContainer {
+  width: 100%;
+  height: 100%;
+  border: 10px solid #000000;
+  }
+
+#streamOne {
+  height: 100%;
+  
+
+
+}
+
+#world {
+  z-index: 10;
+  visibility: visible;
+}
+
+#local {
+  z-index: 1;
+  position: absolute;
+  background: white;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+
+
+
+}
+
+#localcam1 {
+  position: relative;
+  width: 100%;
+  height: 100%
+
+}
+
+h3 {
+font-family: 'VT323', monospace; 
+color: #00ff00;
+font-size: 16px;
+
+}
+
+#terminal {
+  background-color: black;
+  height: 100%
+
+}
+
+
