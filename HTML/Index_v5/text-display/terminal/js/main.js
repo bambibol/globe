@@ -16,7 +16,7 @@ var terminal = function() {
     var charIdx = 0;
 
     var typeChar = function() {
-      var rand = Math.round(Math.random() * 150) + 25;
+      var rand = Math.round(Math.random() * 150) + 7;
 
       setTimeout(function() {
         var char = content[charIdx++];

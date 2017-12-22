@@ -192,3 +192,50 @@ myAudio13.volume = 0;
 $("terminal").animate({ scrollTop: $(document).height() - $(window).height() }, 10000, function() {
     $(this).animate({ scrollTop: 0 }, 1000);
 });
+
+var $lines = $('.prompt p');
+$lines.hide();
+var lineContents = new Array();
+
+var terminal = function() {
+
+  var skip = 0;
+  typeLine = function(idx) {
+    idx == null && (idx = 0);
+    var element = $lines.eq(idx);
+    var content = lineContents[idx];
+    if(typeof content == "undefined") {
+      $('.skip').hide();
+      return;
+    }
+    var charIdx = 0;
+
+    var typeChar = function() {
+      var rand = Math.round(Math.random() * 150) + 7;
+
+      setTimeout(function() {
+        var char = content[charIdx++];
+        element.append(char);
+        if(typeof char !== "undefined")
+          typeChar();
+        else {
+          element.append('<br/><span class="output">' + element.text().slice(9, -1) + '</span>');
+          element.removeClass('active');
+          typeLine(++idx);
+        }
+      }, skip ? 0 : rand);
+    }
+    content = 'echo "' + content + '"';
+    element.append('~$ ').addClass('active');
+    typeChar();
+  }
+
+  $lines.each(function(i) {
+    lineContents[i] = $(this).text();
+    $(this).text('').show();
+  });
+
+  typeLine();
+}
+
+terminal();
