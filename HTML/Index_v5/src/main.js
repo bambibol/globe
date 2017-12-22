@@ -211,7 +211,7 @@ var terminal = function() {
     var charIdx = 0;
 
     var typeChar = function() {
-      var rand = Math.round(Math.random() * 150) + 7;
+      var rand = Math.round(Math.random() * 150) + 25;
 
       setTimeout(function() {
         var char = content[charIdx++];
@@ -225,7 +225,7 @@ var terminal = function() {
         }
       }, skip ? 0 : rand);
     }
-    content = 'echo "' + content + '"';
+    content = 'snitching "' + content + '"';
     element.append('~$ ').addClass('active');
     typeChar();
   }
@@ -239,3 +239,8 @@ var terminal = function() {
 }
 
 terminal();
+
+function pageScroll() {
+    window.scrollBy(0,1);
+    scrolldelay = setTimeout(pageScroll,10);
+}
