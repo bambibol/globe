@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+  color: #55ff55;
+  font-family: monospace;
+}
+.output {
+  color: white;
+}
+.active:after {
+  content: '_';
+}
