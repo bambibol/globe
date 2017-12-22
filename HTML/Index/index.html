@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+</head>
+<body>
+
+	<!-- ALL STREAM LINKS HERE AND MAPPED TO video labels-->
+<!--<button type='button' onclick='transitionTo("local")'>Local</button>-->
+<div id="world" class="container-fluid">
+	<div class="row menusrow">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-xs-2 video-container">
+			<img id="video1" src="http://105.198.227.126:8080/cgi-bin/camera?">
+				</div>
+
+				<div class="col-xs-2 video-container">
+			<img id="video2" src="http://24.222.39.230:8082/mjpeg.cgi">
+				</div>
+
+				<div class="col-xs-2 video-container">
+		<img id="video3" src="http://182.150.46.230:8000/oneshotimage1?1511867998">
+				</div>
+				<div class="col-xs-2 video-container">
+			<img id="video4" src="http://77.20.35.33:80/mjpg/video.mjpg?COUNTER">
+				</div>
+
+				<div class="col-xs-2 video-container">
+			<img id="video5" src="http://122.166.104.28:89/SnapshotJPEG?Resolution=640x480&amp;amp;Quality=Clarity&amp;amp;1511867938">
+				</div>
+
+				<div class="col-xs-2 video-container">
+		<img id="video6" src="http://117.102.176.209:50000/cgi-bin/camera?resolution=640&amp;amp;quality=1&amp;amp;Language=0&amp;amp;1511873906">
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-xs-2 video-container">
+		<img id="video7" src="http://38.101.209.29:8082/mjpg/video.mjpg?COUNTER">
+				</div>
+
+				<div class="col-xs-2 video-container">
+		<img id="video8" src="http://83.3.254.66:1024/img/video.mjpeg?COUNTER">
+				</div>
+
+				<div class="col-xs-2 video-container">
+		<img id="video9" src="http://86.105.20.42:81/mjpg/video.mjpg?COUNTER">
+				</div>
+				<div class="col-xs-2 video-container">
+		<img id="video10" src="http://188.152.219.66:8080/cam_1.cgi">
+				</div>
+
+				<div class="col-xs-2 video-container">
+		<img id="video11" src="http://85.84.103.69/mjpg/video.mjpg?COUNTER">
+				</div>
+
+				<div class="col-xs-2 video-container">
+		<img id="video12" src="http://37.10.168.174/mjpg/video.mjpg?COUNTER">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- ALL AUDIO FILES STORED HERE AND MAPPED TO myAudio labels-->
+
+	<audio id="myAudio" loop>
+  		<!-- <source src="horse.ogg" type="audio/ogg"> -->
+  		<source src="audio/68437__pinkyfinger__piano-a.wav" type="audio/mpeg">
+	</audio>
+		
+	<audio id="myAudio2" loop>
+		<source src="audio/68438__pinkyfinger__piano-b.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio3" loop>
+		<source src="audio/68439__pinkyfinger__piano-bb.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio4" loop>
+		<source src="audio/68440__pinkyfinger__piano-c.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio5" loop>
+		<source src="audio/68441__pinkyfinger__piano-c.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio6" loop>
+		<source src="audio/68441__pinkyfinger__piano-c.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio7" loop>
+		<source src="audio/68443__pinkyfinger__piano-e.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio8" loop>
+		<source src="audio/68444__pinkyfinger__piano-eb.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio9" loop>
+		<source src="audio/68445__pinkyfinger__piano-f.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio10" loop>
+		<source src="audio/68446__pinkyfinger__piano-f.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="myAudio13" loop>
+		<source src="audio/68447__pinkyfinger__piano-g.wav" type="audio/mpeg">
+	</audio>
+	
+	
+
+	
+
+	<!-- PLACE HERE THE LOCAL CAM + WIFI SNITCH -->
+	<div id="local" class="row menusrow">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-xs-3 video-container">
+					<div class="streamContainerOne">
+					<video id="streamOne"></video>
+					</div>
+				</div>
+
+				<div class="col-xs-3 video-container">
+					<div class="streamContainerTwo">
+					<video id="streamTwo"></video>
+					</div>
+				</div>
+
+				<div class="col-xs-3 video-container">
+					<div class="streamContainerThree">
+					<video id="streamThree"></video>
+					</div>
+				</div>
+
+				<div class="col-xs-3 video-container">
+					<div class="streamContainer">
+					<video id="streamFour"></video>
+					</div>
+				</div>
+
+			<div class="row">
+				<div class="col-xs-12" id="terminal" style="overflow-y:scroll">
+					<h3> 
+
+
+
+
+
+				&nbsp;clone: function( elem, dataAndEvents, deepDataAndEvents ) { <br>
+				&nbsp;&nbsp;inPage = jQuery.contains( elem.ownerDocument, elem ); <br><br>
+				var destElements, node, clone, i, srcElements, <br>
+				&nbsp;&nbsp;fixCloneNodeIssues( node, destElements[i] );<br><br>
+				&nbsp;&nbsp;&nbsp;(elem.nodeType === 1 || elem.nodeType === 11) && !jQuery.isXMLDoc(elem) ) { <br>
+				// Ensure that the destination node is not null; Fixes #9587<br><br>
+				&nbsp;&nbsp;if ( destElements[i] ) {<br>
+				// Fix all IE cloning issues
+				// We eschew Sizzle here for performance reasons: http://jsperf.com/getall-vs-sizzle/2<br><br>
+				&nbsp;&nbsp;clone = elem.cloneNode( true );<br>
+				&nbsp;&nbsp;destElements = getAll( clone );<br>
+				&nbsp;for ( i = 0; (node = srcElements[i]) != null; ++i ) {<br>
+				&nbsp;&nbsp;&nbsp;fragmentDiv.innerHTML = elem.outerHTML;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;fragmentDiv.removeChild( clone = fragmentDiv.firstChild );<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;srcElements = getAll( elem );<br><br>
+				// IE<=8 does not properly clone detached, unknown element nodes<br>
+				&nbsp;&nbsp;if ( (!support.noCloneEvent || !support.noCloneChecked) &&<br><br>
+				&nbsp;&nbsp;if ( support.html5Clone || jQuery.isXMLDoc(elem) || !rnoshimcache.test( "<" + elem.nodeName + ">" ) ) {<br><br>
+				&nbsp;&nbsp;&nbsp;}<br><br>
+				&nbsp;} else {<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;    }<br>
+				}<br><br>
+				You have been hacked.<br>
+
+				</h3>
+	</div>
+	</div>
+	</div>
+</div>
+
+
+
+</div>
+
+ </div>
+
+
+
+	<script type="text/javascript" src="src/main.js">
+  	</script>
+
+</body>
+</html>
+
+
