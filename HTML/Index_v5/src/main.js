@@ -4,6 +4,8 @@
 document.addEventListener("keyup", keyupFunction);
 document.addEventListener("keydown", keydownFunction);
 
+// youtube mute
+
 
 
 
@@ -164,28 +166,28 @@ myAudio13.volume = 0;
 //THIS IS THE START OF THE FIRST CODE OPTION FOR THE WEBCAM
 
 
-(function(){
-	var streamOne = document.getElementById('streamOne'),
-		vendorUrl = window.URL || window.webkitURL;
+// (function(){
+// 	var streamOne = document.getElementById('streamOne'),
+// 		vendorUrl = window.URL || window.webkitURL;
 
-	navigator.getMedia = navigator.getUserMedia ||
-						 navigator.webkitGetUserMedia ||
-						 navigator.mozGetUserMedia ||
-						 navigator.msGetUserMedia;
+// 	navigator.getMedia = navigator.getUserMedia ||
+// 						 navigator.webkitGetUserMedia ||
+// 						 navigator.mozGetUserMedia ||
+// 						 navigator.msGetUserMedia;
 
-	//capture video
-	navigator.getMedia({
-		video: true,
-		audio: false
-	}, function(stream) {
-		streamOne.src = vendorUrl.createObjectURL(stream);
-		streamOne.play();
-	}, function(error) {
-		//an error occured
-		//error.code
-	});
+// 	//capture video
+// 	navigator.getMedia({
+// 		video: true,
+// 		audio: false
+// 	}, function(stream) {
+// 		streamOne.src = vendorUrl.createObjectURL(stream);
+// 		streamOne.play();
+// 	}, function(error) {
+// 		//an error occured
+// 		//error.code
+// 	});
 
-})();
+// })();
 
 
 
