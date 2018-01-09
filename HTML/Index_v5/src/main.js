@@ -191,9 +191,9 @@ myAudio13.volume = 0;
 
 
 
-$("terminal").animate({ scrollTop: $(document).height() - $(window).height() }, 10000, function() {
-    $(this).animate({ scrollTop: 0 }, 1000);
-});
+//$("terminal").animate({ scrollTop: $(document).height() - $(window).height() }, 10000, function() {
+//    $(this).animate({ scrollTop: 0 }, 1000);
+//});
 
 var $lines = $('.prompt p');
 $lines.hide();
@@ -242,7 +242,13 @@ var terminal = function() {
 
 terminal();
 
+
 function pageScroll() {
-    window.scrollBy(0,1);
-    scrolldelay = setTimeout(pageScroll,10);
+    window.scrollBy(0,200);
+    scrolldelay = setTimeout(pageScroll,1000);
 }
+
+
+
+
+

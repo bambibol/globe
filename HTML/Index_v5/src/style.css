@@ -125,12 +125,13 @@ width: 100%;
 .streamContainer {
   width: 100%;
   height: 100%;
-  border: 10px solid #000000;
+
   }
 
   .streamContainerOne {
+  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100%
   }
 
 #streamOne {
