@@ -40,13 +40,12 @@ boolean callback = true; // updates only after callbacks
 
 Grid myGrid;
 
-void setup()
-{
+void setup(){
+  fullScreen();
   myGrid = new Grid(width,height);
   
   // GUI setup
   noCursor();
-  size(960,640);
   
   // periodic updates
   if (!callback) {
@@ -66,10 +65,10 @@ void setup()
 // from the TuioProcessing client and then loops over all lists to draw the graphical feedback.
 void draw()
 {
-    
-    PImage bgimg;
-    bgimg = loadImage("bg.jpg");
-    background(bgimg);
+    background(0);
+    //PImage bgimg;
+    //bgimg = loadImage("bg.jpg");
+    //background(bgimg);
     int grid = 30; // change this number to 20 or 50, etc., if you want fewer grid lines
 
     for (int i = 0; i < width; i+=grid) {
