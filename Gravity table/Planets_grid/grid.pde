@@ -1,6 +1,6 @@
 class Grid {
 
-  int[] idsToMasses = { 10000, 30, 30, 30, 5, 30, 1000, 1200, 500, 500, 1};
+  int[] idsToMasses = { 5000, 30, 30, 30, 5, 30, 1000, 1200, 500, 500, 3};
   
 
   float spacing = 15;

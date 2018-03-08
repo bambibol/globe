@@ -27,7 +27,9 @@ import TUIO.*;
 // declare a TuioProcessing client
 TuioProcessing tuioClient;
 
-color[] idsToColors = { color(255,255,0), color(255), color(255), color(255), color(255), color(255,0,0), color(255), color(255), color(255),color(255), color(255)};
+// planets:  sun, mercury, venus, earth, moon, mars, jupiter, saturn, uranus, neptune, pluto
+
+color[] idsToColors = { color(255, 114, 0), color(150, 142, 135), color(175, 112, 56), color(63, 182, 219), color(216, 216, 216), color(173, 72, 0), color(153, 88, 42), color(107, 90, 71), color(186, 239, 233),color(175, 134, 107), color(255)};
   
 
 // these are some helper variables which are used
@@ -91,10 +93,10 @@ void draw()
     for (int i=0;i<tuioObjectList.size();i++) {
        TuioObject tobj = tuioObjectList.get(i);
        //println(tobj.getSymbolID()); // the id of the found object
-       stroke(255,255,255);
+       stroke(255,30);
        
        if (tobj.getSymbolID()<idsToColors.length) {
-         fill(idsToColors[ tobj.getSymbolID()],64);
+         fill(idsToColors[ tobj.getSymbolID()],200);
        } else {
          fill(0);
        }
