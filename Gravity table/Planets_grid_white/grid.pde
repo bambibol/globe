@@ -29,7 +29,7 @@ class Grid {
 
 
 
-    stroke(255);
+    stroke(0);
 
     for (int x=0; x<horizontalAmount; x=x+1) {
       for (int y=0; y<verticalAmount; y=y+1) {

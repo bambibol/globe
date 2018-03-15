@@ -67,7 +67,7 @@ void setup(){
 // from the TuioProcessing client and then loops over all lists to draw the graphical feedback.
 void draw()
 {
-    background(0);
+    background(255);
     //PImage bgimg;
     //bgimg = loadImage("bg.jpg");
     //background(bgimg);
